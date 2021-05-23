@@ -37,6 +37,7 @@
   "rules": {
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    "@typescript-eslint/no-magic-numbers": "off",
     "react/function-component-definition": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
@@ -44,7 +45,8 @@
     "react/jsx-max-depth": ["error", { "max": 5 }],
     "react/jsx-pascal-case": ["warn"],
     "react/jsx-props-no-spreading": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "react/no-multi-comp": "off"
   },
   "ignorePatterns": ["_templates"]
 }
