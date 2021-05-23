@@ -1,8 +1,11 @@
 {
-  "trailingSlash": true,
   "redirects": [
     {
       "source": "/_storybook",
+      "destination": "/_storybook/"
+    },
+    {
+      "source": "/_storybook/",
       "destination": "/_storybook/?path=/story/welcome--to-storybook"
     }
   ]
