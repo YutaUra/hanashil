@@ -1,7 +1,7 @@
 import type { HeadingProps } from '@chakra-ui/layout'
 import { Heading } from '@chakra-ui/layout'
 import type { ReactNode } from 'react'
-import { useBrandColor } from '~/theme'
+import { getBrandColor } from '~/theme'
 
 interface Heading2Props
   extends Omit<
@@ -18,7 +18,7 @@ export const Heading2 = ({
   return (
     <Heading
       as="h2"
-      color={useBrandColor('text')}
+      color={getBrandColor('text')}
       fontSize="xl"
       fontWeight="bold"
       {...props}

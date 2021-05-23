@@ -1,5 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { withKnobs } from '@storybook/addon-knobs'
+import { withLinks } from '@storybook/addon-links'
 import { StoryContext } from '@storybook/react'
 import { jsxDecorator } from 'storybook-addon-jsx'
 import theme from '../src/theme'
@@ -14,4 +15,4 @@ const withChakra = (StoryFn: Function, context: StoryContext) => {
   )
 }
 
-export const decorators = [jsxDecorator, withKnobs, withChakra]
+export const decorators = [jsxDecorator, withKnobs, withLinks, withChakra]

@@ -33,7 +33,7 @@ const BrandColors = {
   },
 }
 
-export const useBrandColor = <
+export const getBrandColor = <
   T extends
     | 'text'
     | `${'accent' | 'main'}.${'dark' | 'light' | 'middium' | 'text'}`,

@@ -1,0 +1,1 @@
+export { TalkRoomUser } from './TalkRoomUser'

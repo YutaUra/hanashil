@@ -1,4 +1,5 @@
 import { Box, Center, HStack, Icon, Stack } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { AiOutlineUser } from 'react-icons/ai'
 import { FaRocketchat } from 'react-icons/fa'
 import { HiPlus } from 'react-icons/hi'
@@ -7,7 +8,7 @@ import { Heading3 } from '~/components/atoms/Heading3'
 import { Logo } from '~/components/atoms/Logo'
 import { AccentCard } from '~/components/molecules/AccentCard'
 import { MainCard } from '~/components/molecules/MainCard'
-import { resolveBrandColor, useBrandColor } from '~/theme'
+import { getBrandColor, resolveBrandColor } from '~/theme'
 
 const MainCards = (): JSX.Element => {
   return (
@@ -42,18 +43,23 @@ export const Top = (): JSX.Element => (
       <Logo />
     </Center>
     <Heading2 mb="2">参加しよう！</Heading2>
-    <AccentCard
-      category="その他"
-      date={new Date(2021, 5, 15, 20, 30)}
-      level="中級"
-      mb="2"
-      participants={[
-        'https://cdn.pixabay.com/photo/2014/04/03/10/32/businessman-310819__480.png',
-        'https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_1280.png',
-        'https://cdn.pixabay.com/photo/2016/04/01/11/25/avatar-1300331__480.png',
-      ]}
-      title="メンタルが強い人の特徴とは？？"
-    />
+
+    <NextLink href="/rooms" passHref>
+      <AccentCard
+        as="a"
+        category="その他"
+        date={new Date(2021, 5, 15, 20, 30)}
+        level="中級"
+        mb="2"
+        participants={[
+          'https://cdn.pixabay.com/photo/2014/04/03/10/32/businessman-310819__480.png',
+          'https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_1280.png',
+          'https://cdn.pixabay.com/photo/2016/04/01/11/25/avatar-1300331__480.png',
+        ]}
+        title="メンタルが強い人の特徴とは？？"
+        w="full"
+      />
+    </NextLink>
     <Heading2 mb="2">予約しよう！</Heading2>
     <Stack pb="20" spacing="4">
       <Stack>
@@ -87,15 +93,15 @@ export const Top = (): JSX.Element => (
           bg="white"
           boxShadow={`0 0 0.5rem ${resolveBrandColor('accent.middium')}`}
           boxSize="16"
-          color={useBrandColor('accent.middium')}
+          color={getBrandColor('accent.middium')}
           p="3"
           rounded="2xl"
         />
         <Icon
           as={HiPlus}
-          bgGradient={`linear(to-r, ${useBrandColor(
+          bgGradient={`linear(to-r, ${getBrandColor(
             'accent.dark',
-          )}, ${useBrandColor('accent.light')})`}
+          )}, ${getBrandColor('accent.light')})`}
           boxShadow="0 0 0.25rem #AFAFAF"
           boxSize="12"
           color="white"
@@ -109,7 +115,7 @@ export const Top = (): JSX.Element => (
           bg="white"
           boxShadow={`0 0 0.5rem ${resolveBrandColor('accent.middium')}`}
           boxSize="12"
-          color={useBrandColor('accent.middium')}
+          color={getBrandColor('accent.middium')}
           p="1"
           rounded="2xl"
         />

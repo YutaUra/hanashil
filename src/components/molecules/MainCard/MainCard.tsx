@@ -3,7 +3,7 @@ import type { StackProps } from '@chakra-ui/layout'
 import { Stack, Text } from '@chakra-ui/layout'
 import { format } from 'date-fns'
 import { AvatarImage } from '~/components/atoms/AvatarImage'
-import { resolveBrandColor, useBrandColor } from '~/theme'
+import { getBrandColor, resolveBrandColor } from '~/theme'
 
 interface MainCardProps
   extends Omit<
@@ -30,9 +30,9 @@ export const MainCard = ({
 }: MainCardProps): JSX.Element => {
   return (
     <Stack
-      bg={useBrandColor('main.middium')}
+      bg={getBrandColor('main.middium')}
       boxShadow={`0 0 0.5rem ${resolveBrandColor('accent.middium')}`}
-      color={useBrandColor('main.text')}
+      color={getBrandColor('main.text')}
       fontWeight="bold"
       px={{ base: '6' }}
       py={{ base: '2' }}
@@ -48,8 +48,8 @@ export const MainCard = ({
           ))}
         </Stack>
         <Button
-          bg={useBrandColor('accent.middium')}
-          color={useBrandColor('accent.text')}
+          bg={getBrandColor('accent.middium')}
+          color={getBrandColor('accent.text')}
           px="4"
           py="2.5"
           rounded="full"

@@ -38,6 +38,7 @@
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/prefer-readonly-parameter-types": "off",
     "@typescript-eslint/no-magic-numbers": "off",
+    "@typescript-eslint/no-type-alias": "off",
     "react/function-component-definition": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],

@@ -2,7 +2,7 @@ import type { StackProps } from '@chakra-ui/layout'
 import { Stack, Text } from '@chakra-ui/layout'
 import { format } from 'date-fns'
 import { AvatarImage } from '~/components/atoms/AvatarImage'
-import { useBrandColor } from '~/theme'
+import { getBrandColor } from '~/theme'
 
 interface AccentCardProps
   extends Omit<
@@ -26,10 +26,10 @@ export const AccentCard = ({
 }: AccentCardProps): JSX.Element => {
   return (
     <Stack
-      bgGradient={`linear(to-r, ${useBrandColor(
+      bgGradient={`linear(to-r, ${getBrandColor(
         'accent.dark',
-      )}, ${useBrandColor('accent.light')})`}
-      color={useBrandColor('accent.text')}
+      )}, ${getBrandColor('accent.light')})`}
+      color={getBrandColor('accent.text')}
       fontWeight="bold"
       px={{ base: '6' }}
       py={{ base: '2' }}
